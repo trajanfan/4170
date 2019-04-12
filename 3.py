@@ -138,6 +138,8 @@ if __name__ == "__main__":
     [813, 883, 451, 509, 615, 77, 281, 613, 459, 205, 380, 274, 302, 35, 805]
     ]
     
+#    import time
+#    start = time.time()
     for i in range(len(matrix)):
         for j in range(len(matrix)):
             matrix[i][j] = 1000-matrix[i][j]
@@ -149,3 +151,5 @@ if __name__ == "__main__":
     for p in path:
         add += matrix[p[0]][p[1]]
     print("The largest value is:", 15000-add)
+#    end = time.time()
+#    print("Run time: ",end-start)
