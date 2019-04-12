@@ -29,4 +29,8 @@ def compare(Gregor, Oberyn):
 if __name__ == "__main__":
     Gregor = get_num(8,5)
     Oberyn = get_num(4,10)
+#    import time
+#    start = time.time()
     print("The probability that Gregor wins:", compare(Gregor,Oberyn))
+#    end = time.time()
+#    print("Run time: ",end-start)
