@@ -83,7 +83,6 @@ def hungary(matrix_ori):
         line_count = len(delete_count_of_row) + len(delete_count_of_col)    
         if line_count == len(matrix):
             break
-        # step 5
         if 0 not in sum(left_mat,[]):
             row_sub = list(set(range(len(matrix))) - set(delete_count_of_row))
             min_value = min(sum(left_mat,[])) # the smallest value in the rest of the matrix
