@@ -4,7 +4,7 @@
 
 Use command python3 [filename].py to run each file. 
 
-## Expected result
+## Expected results
 
 For the 1.py. The expected result would be 120536, and the time excepted to be about 0.001s.
 
