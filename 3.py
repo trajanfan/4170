@@ -17,17 +17,17 @@ def hungary(matrix_ori):
     while (line_count < len(matrix)):
         # step 3
         line_count = 0
-        row_zero_count = []
-        col_zero_count = []
+        row_zero_count = [] # The number of zeros in each row.
+        col_zero_count = [] # The number of zeros in each column.
         for i in range(len(matrix)):
             row_zero_count.append(matrix[i].count(0))
         for i in range(len(matrix)):
             col_zero_count.append([matrix[k][i] for k in range(len(matrix))].count(0))
-        delete_count_of_row = []
-        delete_count_of_col = []
-        zero_add_zero = []
-        zero_add_one = []
-        zero_add_two = []
+        delete_count_of_row = [] # the lines through rows.
+        delete_count_of_col = [] # the lines through columns.
+        zero_add_zero = [] # zeros to be the only one in its column and row.
+        zero_add_one = [] # zeros to be the only one in its column or row.
+        zero_add_two = [] # other zeros
         for i in range(len(matrix)):
             for j in range(len(matrix)):
                 if matrix[i][j] == 0:
@@ -86,7 +86,7 @@ def hungary(matrix_ori):
         # step 5
         if 0 not in sum(left_mat,[]):
             row_sub = list(set(range(len(matrix))) - set(delete_count_of_row))
-            min_value = min(sum(left_mat,[]))
+            min_value = min(sum(left_mat,[])) # the smallest value in the rest of the matrix
             for i in row_sub:
                 for k in range(len(matrix)):
                     matrix[i][k] -= min_value
@@ -95,7 +95,7 @@ def hungary(matrix_ori):
                     matrix[k][i] += min_value
     return matrix
 
-# Use the transformed matrix to get the assignment
+# Use the transformed matrix to get the assignment, similar to step3.
 def assignment(matrix):
     row_zero_count = []
     for i in range(len(matrix)):
