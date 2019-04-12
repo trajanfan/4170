@@ -21,4 +21,8 @@ def make_currency(a, total):
     return dp[total][len(a)-1]
 
 if __name__ == "__main__":
+#    import time
+#    start = time.time()
     print("The number of ways is:",make_currency([1,5,10,20,50,100],500))
+#    end = time.time()
+#    print("Run time: ",end-start)
